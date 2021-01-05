@@ -1,0 +1,31 @@
+import turtle
+import time
+wn=turtle.Screen()
+wn.title("Esther's Animation")
+wn.bgcolor("white")
+player=turtle.Turtle()
+player.shape("square")
+player.color("green")
+turtle.speed(100000000)
+while True:
+    player.shape("square")
+    time.sleep(0.5)
+    player.shape("circle")
+    time.sleep(0.5)
+    for i in range(30):
+        turtle.circle(5*i)
+        turtle.circle(-5*i)
+        turtle.right(i)
+        turtle.color("blue")
+        turtle.circle(5*i)
+        turtle.circle(-5*i)
+        turtle.right(i)
+        turtle.color("green")
+    player.shape("square")
+    player.color("red")
+    time.sleep(0.5)
+    for i in range(30):
+        turtle.circle(5*i)
+        turtle.circle(-5*i)
+        turtle.forward(i)
+wn.mainloop()
